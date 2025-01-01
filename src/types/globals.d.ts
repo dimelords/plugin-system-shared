@@ -9,8 +9,8 @@ declare global {
     interface ElementChildrenAttribute { children: {}; }
   }
 
-  // Make ContentProps globally available
-  interface ContentProps {
+  // Define ContentProps interface
+  type ContentProps = {
     manifest: PluginManifest;
     config: PluginConfig;
   }
@@ -28,4 +28,9 @@ declare global {
     React: typeof React;
     ReactDOM: typeof ReactDOM;
   }
+}
+
+export interface ContentProps {
+  manifest: PluginManifest;
+  config: PluginConfig;
 }

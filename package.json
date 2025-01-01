@@ -1,19 +1,35 @@
 {
   "name": "plugin-system-shared",
   "version": "1.0.0",
+  "description": "Shared plugin system types and base classes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "build": "tsc",
-    "prepublish": "npm run build"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
   },
+  "keywords": [
+    "plugin",
+    "system",
+    "typescript",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "typescript": "^5.7.2"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
