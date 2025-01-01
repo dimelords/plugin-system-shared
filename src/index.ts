@@ -1,2 +1,2 @@
-export * from './utils/hooks';
-export * from './types/globals';
+export * from './types/plugin';
+export { BasePlugin } from './BasePlugin';
