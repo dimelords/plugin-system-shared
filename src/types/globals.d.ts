@@ -8,13 +8,22 @@ declare global {
     interface IntrinsicElements extends React.JSX.IntrinsicElements { }
     interface ElementChildrenAttribute { children: {}; }
   }
-  
+
   // Make ContentProps globally available
   interface ContentProps {
     manifest: PluginManifest;
     config: PluginConfig;
   }
-  
+
+  // Define BasePlugin as abstract class
+  abstract class BasePlugin {
+    manifest: PluginManifest;
+    protected config: PluginConfig;
+    constructor(manifestData?: Partial<PluginManifest>);
+    getConfig(): PluginConfig;
+    abstract render(): React.ReactElement;
+  }
+
   interface Window {
     React: typeof React;
     ReactDOM: typeof ReactDOM;
