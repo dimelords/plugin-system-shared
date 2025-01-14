@@ -19,6 +19,7 @@ export interface PluginManifest {
     dependencies: string[];
     packages: PluginPackage[];
     config: PluginConfig;
+    corePlugin?: boolean
 }
 
 export interface ContentProps {

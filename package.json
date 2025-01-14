@@ -1,7 +1,7 @@
 {
-  "name": "plugin-system-shared",
+  "name": "@dimelords/plugin-system-shared",
   "version": "1.0.0",
-  "description": "Shared plugin system types and base classes",
+  "description": "Shared plugin system types and base classes for React dynamic plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -20,10 +20,23 @@
     "plugin",
     "system",
     "typescript",
-    "react"
+    "react",
+    "dynamic-plugins",
+    "plugin-system"
   ],
-  "author": "Your Name",
+  "author": "Fredrik Gustafsson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimelords/plugin-system-shared.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dimelords/plugin-system-shared/issues"
+  },
+  "homepage": "https://github.com/dimelords/plugin-system-shared#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
